@@ -101,7 +101,7 @@ public class StudentRepository {
 
         for(String student: studentSet){
             if(studentMap.containsKey(student)){
-                student.remove(student);
+                studentMap.remove(student);
             }
         }
     }
