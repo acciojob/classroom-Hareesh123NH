@@ -78,11 +78,15 @@ public class StudentRepository {
         if(teacherStudentMapping.containsKey(teacher)){
             //List<String> students=teacherStudentMapping.get(teacher);
             for(String student:teacherStudentMapping.get(teacher)){
-                studentMap.remove(student);
+                if(studentMap.containsKey(student)){
+                    studentMap.remove(student);
+                }
             }
             teacherStudentMapping.remove(teacher);
         }
-        teacherMap.remove(teacher);
+        if(teacherMap.containsKey(teacher)){
+            teacherMap.remove(teacher);
+        }
     }
 
     public void deleteAllTeachers(){
