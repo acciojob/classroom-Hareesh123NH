@@ -23,6 +23,7 @@ public class StudentService {
         studentRepository.saveStudentTeacherPair(student, teacher);
     }
 
+
     public Student findStudent(String studentName){
         return studentRepository.findStudent(studentName);
     }
