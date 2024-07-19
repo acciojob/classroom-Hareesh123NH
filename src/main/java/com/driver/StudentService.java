@@ -9,10 +9,11 @@ import org.springframework.stereotype.Service;
 public class StudentService {
 
     @Autowired
-    StudentRepository studentRepository;
+    StudentRepository studentRepository=new StudentRepository();
 
     public void addStudent(Student student){
         studentRepository.saveStudent(student);
+
     }
 
     public void addTeacher(Teacher teacher){

@@ -24,7 +24,7 @@ public class StudentController {
     public ResponseEntity<String> addStudent(@RequestBody Student student){
 
         studentService.addStudent(student);
-
+        System.out.println(student.getName());
         return new ResponseEntity<>("New student added successfully", HttpStatus.CREATED);
     }
 

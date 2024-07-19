@@ -20,6 +20,7 @@ public class StudentRepository {
     public void saveStudent(Student student){
         // your code goes here
     	//System.out.println("Hareesh");
+        System.out.println(student.getName());
         studentMap.put(student.getName(), student);
     }
 
